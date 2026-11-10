@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f6f7fb">
+  <title>MASTER_AI — One mind, many modes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#232642;--muted:#9295a9;--line:#e9eaf2;--purple:#7768e8;--bg:#f6f7fb;--font:'DM Sans',sans-serif;--display:'Manrope',sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px var(--font)}button,textarea{font:inherit}.app{min-height:100vh;display:flex}.sidebar{width:254px;flex:none;background:#fff;border-right:1px solid var(--line);padding:23px 15px 12px;display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:10px;padding:0 8px 24px}.brand-mark{width:35px;height:35px;border-radius:11px;background:linear-gradient(145deg,#9587ff,#6e5fdf);display:grid;place-items:center;color:#fff;font-size:21px;box-shadow:0 5px 13px #7566e839}.brand-name{font:800 18px var(--display);letter-spacing:-.8px}.brand-name span{color:var(--purple)}.brand small{display:block;margin-top:2px;font-size:8px;letter-spacing:1.35px;color:#a1a3b2;font-weight:700}.new-chat{height:40px;border:1px solid var(--line);border-radius:9px;background:#fff;text-align:left;padding:0 10px;color:#4f536d;font-size:11px;font-weight:650;cursor:pointer}.new-chat span{font-size:17px;color:var(--purple);margin-right:7px;vertical-align:-1px}.label{display:flex;justify-content:space-between;align-items:center;margin:24px 8px 9px;color:#a0a2b1;font-size:8px;font-weight:750;letter-spacing:1.35px}.label b{background:#f0efff;color:#7769e6;border-radius:5px;padding:3px 6px;font-size:9px;letter-spacing:0}.mode-list{display:grid;gap:2px}.mode{height:34px;width:100%;border:0;border-radius:8px;background:transparent;display:flex;align-items:center;gap:9px;padding:0 8px;color:#71758c;text-align:left;font-size:10.5px;font-weight:500;cursor:pointer;transition:.15s}.mode:hover{background:#f7f7fb;color:#393d59}.mode.active{background:#f0efff;color:#685bd8;font-weight:700}.mode-icon{width:20px;height:20px;border-radius:6px;background:#f3f2fc;display:grid;place-items:center;font-size:11px;flex:none}.mode.active .mode-icon{background:#e5e1ff}.mode i{margin-left:auto;width:5px;height:5px;border-radius:50%;background:#8375ed}.side-bottom{margin-top:auto}.privacy{background:#f8f7ff;border:1px solid #efedff;border-radius:10px;padding:11px;margin-bottom:12px}.privacy strong{font-size:10px}.privacy p{margin:4px 0 0;color:#9496a9;font-size:9px;line-height:1.55}.profile{border-top:1px solid var(--line);padding:12px 4px 0;display:flex;align-items:center;gap:8px}.avatar{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#ffeadc;color:#b66f4c;font-size:11px;font-weight:700}.profile strong{font-size:10px;display:block}.profile small{font-size:9px;color:#a0a2b0}.main{min-width:0;flex:1;display:flex;flex-direction:column;height:100vh}.topbar{height:58px;flex:none;border-bottom:1px solid var(--line);background:#ffffffc9;display:flex;align-items:center;padding:0 29px}.crumb{display:flex;align-items:center;gap:9px;color:#a0a2b1;font-size:10px}.crumb b{font-weight:400;color:#d1d2dc}.crumb strong{color:#525670;font-size:11px;font-weight:650}.right{margin-left:auto;display:flex;align-items:center;gap:15px}.ready{font-size:9px;color:#9093a7;display:flex;align-items:center;gap:6px}.ready i{width:6px;height:6px;background:#62bf98;border-radius:50%;box-shadow:0 0 0 3px #62bf981c}.help{width:23px;height:23px;border-radius:50%;border:1px solid var(--line);background:#fff;color:#9295aa;font-size:10px;cursor:pointer}.mobile-toggle,.close-menu{display:none}.scroll{flex:1;overflow-y:auto;display:flex;flex-direction:column}.welcome{width:min(680px,calc(100% - 34px));margin:auto;text-align:center;padding:28px 0 22px}.orb{width:64px;height:64px;border-radius:22px;background:linear-gradient(145deg,#f0edff,#e5e3ff);display:grid;place-items:center;margin:0 auto 15px;position:relative}.orb span{height:40px;width:40px;border-radius:14px;background:linear-gradient(145deg,#9283f2,#6f60dc);box-shadow:0 5px 12px #7668e843;color:white;display:grid;place-items:center;font-size:24px}.orb:before,.orb:after{content:"";position:absolute;height:6px;width:6px;border-radius:50%;background:#f3b49c}.orb:before{right:5px;top:6px}.orb:after{left:3px;bottom:9px;background:#84cbb1}.eyebrow{font-size:8px;letter-spacing:1.55px;color:#9b9dae;font-weight:750}.welcome h1{font:750 clamp(33px,4vw,44px)/1.12 var(--display);letter-spacing:-1.9px;color:#272a47;margin:12px 0 8px}.welcome h1 em{font-style:normal;color:var(--purple)}.welcome p{font-size:11.5px;line-height:1.7;color:#9295a9;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;max-width:590px;margin:22px auto 0}.card{min-height:63px;display:flex;align-items:center;gap:9px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px;cursor:pointer;transition:.16s}.card:hover{transform:translateY(-2px);border-color:#d4cff9;box-shadow:0 6px 15px #302d5a0d}.card-icon{height:27px;width:27px;border-radius:8px;display:grid;place-items:center;flex:none;font-size:13px}.card:nth-child(1) .card-icon{background:#f0edff;color:#7c6ee7}.card:nth-child(2) .card-icon{background:#eaf6f1;color:#64a98b}.card:nth-child(3) .card-icon{background:#fff0e7;color:#d38b68}.card small{display:block;color:#a0a2b0;font-size:7px;font-weight:750;letter-spacing:.7px;margin-bottom:3px}.card strong{display:block;color:#535771;font-size:9px;white-space:nowrap}.messages{display:none;width:min(720px,calc(100% - 34px));margin:0 auto;padding:25px 0 18px}.messages.visible{display:block}.message{display:flex;gap:9px;align-items:flex-start;margin-bottom:18px}.message.user{flex-direction:row-reverse}.msg-mark{width:28px;height:28px;flex:none;border-radius:9px;display:grid;place-items:center;background:#efedff;color:#7768e8;font-size:12px}.message.user .msg-mark{background:#ffeadc;color:#b66f4c}.bubble{max-width:min(83%,580px);padding:10px 13px;background:#fff;border:1px solid var(--line);border-radius:3px 12px 12px 12px;color:#51556f;font-size:11.5px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere}.message.user .bubble{background:#7768e8;border-color:#7768e8;color:white;border-radius:12px 3px 12px 12px}.composer-area{width:min(720px,calc(100% - 34px));margin:0 auto;padding:10px 0 12px;flex:none}.file-chip{display:none;align-items:center;gap:8px;width:max-content;max-width:100%;margin-bottom:7px;padding:6px 9px;background:#fff;border:1px solid var(--line);border-radius:8px;color:#7265de;font-size:9px}.file-chip.show{display:flex}.file-chip button{border:0;background:none;color:#9597a9;cursor:pointer}.composer{display:flex;align-items:center;gap:8px;min-height:51px;padding:6px 7px 6px 9px;background:#fff;border:1px solid #e4e5ee;border-radius:12px;box-shadow:0 4px 16px #3432570a}.composer:focus-within{border-color:#c9c2f8;box-shadow:0 0 0 3px #7768e811}.attach{height:30px;width:30px;flex:none;border:0;border-radius:8px;background:#f4f3fc;color:#8176d5;font-size:18px;cursor:pointer}.composer textarea{flex:1;resize:none;max-height:120px;border:0;outline:0;background:transparent;padding:8px 0;color:#464a65;font:11px var(--font)}.composer textarea::placeholder{color:#a4a6b5}.enter-hint{font-size:8px;color:#b2b4c1;white-space:nowrap}.send{width:32px;height:32px;border:0;border-radius:9px;background:#7768e8;color:#fff;font-size:17px;cursor:pointer;transition:.15s}.send:hover{background:#6657d4;transform:translateY(-1px)}.send:disabled{opacity:.55;cursor:wait}.disclaimer{text-align:center;color:#b0b2bf;font-size:8px;margin-top:8px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,10px);padding:9px 14px;border-radius:9px;background:#292c49;color:white;font-size:10px;opacity:0;pointer-events:none;transition:.2s;z-index:10}.toast.show{opacity:1;transform:translate(-50%,0)}.backdrop{display:none}@media(max-width:850px){.sidebar{width:228px}.topbar{padding:0 20px}.cards{gap:6px}.card{padding:7px;gap:6px}}@media(max-width:650px){.sidebar{position:fixed;inset:0 auto 0 0;width:270px;transform:translateX(-105%);transition:.23s;box-shadow:10px 0 32px #22223d16}.sidebar.open{transform:translateX(0)}.close-menu{display:block;margin-left:auto;border:0;background:none;color:#85889c;font-size:21px}.brand{padding-bottom:22px}.backdrop.show{display:block;position:fixed;inset:0;background:#24243e70;z-index:4}.mobile-toggle{display:block;margin-right:10px;border:0;background:none;color:#87899d;font-size:17px;cursor:pointer}.topbar{height:52px;padding:0 13px}.ready{display:none}.right{gap:8px}.welcome{padding:23px 0 17px}.orb{width:57px;height:57px;border-radius:20px}.orb span{height:36px;width:36px;border-radius:12px}.welcome h1{font-size:35px}.cards{grid-template-columns:1fr;max-width:350px;margin-top:17px;gap:6px}.card{min-height:49px;padding:7px 10px}.card-icon{height:29px;width:29px}.card strong{font-size:9.5px}.composer-area,.messages{width:calc(100% - 20px)}.enter-hint{display:none}.bubble{max-width:89%}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">✳</div><div><div class="brand-name">MASTER<span>_AI</span></div><small>ONE MIND, MANY MODES</small></div><button class="close-menu" id="closeMenu" aria-label="Close menu">×</button></div>
+      <button class="new-chat" id="newChat"><span>＋</span> New conversation</button>
+      <div class="label">YOUR ASSISTANTS <b>11</b></div>
+      <nav class="mode-list" id="modeList">
+        {% for mode in modes %}<button class="mode {% if loop.first %}active{% endif %}" data-mode="{{ mode }}"><span class="mode-icon">{{ ['✳','✧','⌘','✈','◎','♨','文','◇','⌁','↗','▤'][loop.index0] }}</span>{{ mode }}{% if loop.first %}<i></i>{% endif %}</button>{% endfor %}
+      </nav>
+      <div class="side-bottom"><div class="privacy"><strong>Your space, your pace</strong><p>Switch modes anytime. Upload a PDF to ask questions about its contents.</p></div><div class="profile"><div class="avatar">M</div><div><strong>My workspace</strong><small>MASTER_AI</small></div></div></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><button class="mobile-toggle" id="mobileToggle" aria-label="Open assistants">☰</button><div class="crumb">Workspace <b>/</b><strong id="currentMode">General AI</strong></div><div class="right"><div class="ready"><i></i> Ready when you are</div><button class="help" id="help" aria-label="Help">?</button></div></header>
+      <div class="scroll" id="scrollArea">
+        <section class="welcome" id="welcome"><div class="orb"><span>✳</span></div><div class="eyebrow">A LITTLE MORE POSSIBLE</div><h1>Good things start<br>with <em>a question.</em></h1><p>One space. A dozen ways to think bigger.<br>What can we help you make happen?</p><div class="cards"><button class="card" data-prompt="Help me understand a topic I've been curious about"><span class="card-icon">✧</span><span><small>LEARN SOMETHING</small><strong>Explain a new idea</strong></span></button><button class="card" data-prompt="Help me make a clear plan for an idea"><span class="card-icon">✳</span><span><small>MAKE A PLAN</small><strong>Turn ideas into action</strong></span></button><button class="card" data-prompt="Give me a creative idea to get started with"><span class="card-icon">↗</span><span><small>GET INSPIRED</small><strong>Find a fresh perspective</strong></span></button></div></section>
+        <section class="messages" id="messages" aria-live="polite"></section>
+      </div>
+      <div class="composer-area"><div class="file-chip" id="fileChip"></div><form class="composer" id="chatForm"><button class="attach" type="button" id="attachButton" aria-label="Attach a PDF" title="Attach a PDF">＋</button><textarea rows="1" id="messageInput" aria-label="Message" placeholder="Ask anything..."></textarea><span class="enter-hint">↵ to send</span><button class="send" id="sendButton" aria-label="Send message">↑</button><input type="file" id="pdfInput" accept="application/pdf,.pdf" hidden></form><div class="disclaimer">AI can make mistakes. Check important details.</div></div>
+    </main>
+  </div>
+  <div class="backdrop" id="backdrop"></div><div class="toast" id="toast"></div>
+  <script>window.AI_MODES={{ modes|tojson }};</script>
+  <script>
+    const modes=window.AI_MODES;
+    const input=document.getElementById('messageInput');
+    const form=document.getElementById('chatForm');
+    const messages=document.getElementById('messages');
+    const welcome=document.getElementById('welcome');
+    const sendButton=document.getElementById('sendButton');
+    const fileChip=document.getElementById('fileChip');
+    const pdfInput=document.getElementById('pdfInput');
+    const history=[];
+    let activeMode='General AI';
+    let pdfDocument='';
+    let busy=false;
+
+    function toast(text){const el=document.getElementById('toast');el.textContent=text;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2600)}
+    function setMode(mode){
+      if(!modes.includes(mode))return;
+      activeMode=mode;
+      document.getElementById('currentMode').textContent=mode;
+      document.querySelectorAll('.mode').forEach(button=>{
+        button.classList.toggle('active',button.dataset.mode===mode);
+        button.querySelector('i')?.remove();
+      });
+      const selected=document.querySelector(`.mode[data-mode="${CSS.escape(mode)}"]`);
+      if(selected)selected.insertAdjacentHTML('beforeend','<i></i>');
+      closeSidebar();
+    }
+    function closeSidebar(){document.getElementById('sidebar').classList.remove('open');document.getElementById('backdrop').classList.remove('show')}
+    function addMessage(role,text){
+      welcome.style.display='none';messages.classList.add('visible');
+      const row=document.createElement('div');row.className=`message ${role}`;
+      const mark=document.createElement('div');mark.className='msg-mark';mark.textContent=role==='assistant'?'✳':'M';
+      const bubble=document.createElement('div');bubble.className='bubble';bubble.textContent=text;
+      row.append(mark,bubble);messages.append(row);
+      document.getElementById('scrollArea').scrollTop=document.getElementById('scrollArea').scrollHeight;
+      return row;
+    }
+    function clearChat(){history.length=0;messages.replaceChildren();messages.classList.remove('visible');welcome.style.display='';pdfDocument='';fileChip.replaceChildren();fileChip.classList.remove('show');pdfInput.value='';input.placeholder='Ask anything...'}
+    function resizeInput(){input.style.height='auto';input.style.height=Math.min(input.scrollHeight,120)+'px'}
+    document.getElementById('modeList').addEventListener('click',event=>{const button=event.target.closest('[data-mode]');if(button)setMode(button.dataset.mode)});
+    document.getElementById('newChat').addEventListener('click',clearChat);
+    document.getElementById('help').addEventListener('click',()=>toast('Choose a mode, ask a question, or attach a PDF.'));
+    document.querySelectorAll('.card').forEach(card=>card.addEventListener('click',()=>{input.value=card.dataset.prompt;input.focus();resizeInput()}));
+    document.getElementById('mobileToggle').addEventListener('click',()=>{document.getElementById('sidebar').classList.add('open');document.getElementById('backdrop').classList.add('show')});
+    document.getElementById('closeMenu').addEventListener('click',closeSidebar);
+    document.getElementById('backdrop').addEventListener('click',closeSidebar);
+    document.getElementById('attachButton').addEventListener('click',()=>pdfInput.click());
+    pdfInput.addEventListener('change',async()=>{
+      const file=pdfInput.files[0];if(!file)return;
+      if(file.size>12*1024*1024){toast('PDF must be smaller than 12 MB.');pdfInput.value='';return}
+      fileChip.textContent='Reading PDF…';fileChip.classList.add('show');
+      const formData=new FormData();formData.append('file',file);
+      try{
+        const response=await fetch('/api/pdf',{method:'POST',body:formData});
+        const result=await response.json();if(!response.ok)throw new Error(result.error||'Unable to read this PDF.');
+        pdfDocument=result.text;setMode('PDF Genius');
+        fileChip.replaceChildren(document.createTextNode(`▤ ${result.filename} · ${result.pages} pages`));
+        const remove=document.createElement('button');remove.type='button';remove.textContent='×';remove.setAttribute('aria-label','Remove PDF');
+        remove.addEventListener('click',()=>{pdfDocument='';fileChip.classList.remove('show');pdfInput.value=''});fileChip.append(remove);
+        input.placeholder='Ask a question about your PDF…';toast('PDF ready. Ask a question below.');
+      }catch(error){fileChip.classList.remove('show');pdfInput.value='';toast(error.message)}
+    });
+    input.addEventListener('input',resizeInput);
+    input.addEventListener('keydown',event=>{if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();form.requestSubmit()}});
+    form.addEventListener('submit',async event=>{
+      event.preventDefault();const message=input.value.trim();if(!message||busy)return;
+      input.value='';resizeInput();addMessage('user',message);const waiting=addMessage('assistant','Thinking…');busy=true;sendButton.disabled=true;
+      try{
+        const response=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:activeMode,message,document:pdfDocument,history})});
+        const result=await response.json();waiting.remove();if(!response.ok)throw new Error(result.error||'The request could not be completed.');
+        addMessage('assistant',result.reply);history.push({role:'user',text:message},{role:'assistant',text:result.reply});if(history.length>20)history.splice(0,history.length-20);
+      }catch(error){waiting.remove();addMessage('assistant',error.message)}
+      finally{busy=false;sendButton.disabled=false;input.focus()}
+    });
+  </script>
+</body>
+</html>
